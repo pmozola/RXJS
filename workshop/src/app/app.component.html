@@ -2,4 +2,6 @@
   <li class="text" *ngFor="let item of items | async">
    from : {{item.sender}}, to: {{item.receiver}}, isRead {{item.isRead}}, message: {{item.body}}
   </li>
+
+  <app-message-form></app-message-form>
 </ul>

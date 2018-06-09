@@ -1,0 +1,18 @@
+<h3>Using FormControl </h3>
+<div>
+  <div>
+    Name:
+    <input [formControl]="name">
+    <label *ngIf="name.invalid" [ngClass]="'error'"> Name required </label>
+  </div>
+  <div>
+    body:
+    <input [formControl]="body">
+  </div>
+  <button type="submit"  (click)="onFormSubmit()">Submit</button>
+</div>
+<div>
+
+    <b>{{ name.status }}</b>
+ 
+</div>

@@ -13,11 +13,12 @@ export class AppComponent {
   items: Observable<Message[]>;
   constructor(db: AngularFirestore){
     this.items = db.collection<Message>('message').valueChanges();
-    this.items.pipe(map(array=> array.sort( function(m1, m2) {
-      if (m1.timestamp > m1.timestamp) {
-        return 1;
-      }
-      return 0;
+    this.items.pipe(map( 
+        array=> array.sort( function(m1, m2) {
+        if (m1.timestamp > m1.timestamp) {
+          return 1;
+        }
+        return 0;
     }
   )))
   }
