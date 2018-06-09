@@ -15,7 +15,7 @@ export class AppComponent {
     this.items = db.collection<Message>('message').valueChanges();
     this.items.pipe(map( 
         array=> array.sort( function(m1, m2) {
-        if (m1.timestamp > m1.timestamp) {
+        if (m1.timestamp > m2.timestamp) {
           return 1;
         }
         return 0;
